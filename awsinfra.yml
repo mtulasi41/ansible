@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: create a new ec2 VPC
+      amazon.aws.ec2_vpc_net:
+        aws_access_key: "AKIARQ7KVAYL4J6EHYPD"
+        aws_secret_key: "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"
+        name: vpc
+        cidr_block: 172.31.0.0/16
+        region: us-east-2
